@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table to SQL Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Table to SQL Converter</h1>
+        <h4>This Simple SQL converter has its limitation such as column contents that have an apostrophe (') in it needs to be adjusted by adding another apostrophe (')</h4>
+
+        <!-- Input field for the table name -->
+        <label for="tableName">Table Name:</label>
+        <input type="text" id="tableName" placeholder="Table Name">
+        <br>
+        <!-- Input fields for column names -->
+        <label for="columnName1">Column 1 Name:</label>
+        <input type="text" id="columnName1" placeholder="Column 1">
+        <br>
+        <label for="columnName2">Column 2 Name:</label>
+        <input type="text" id="columnName2" placeholder="Column 2">
+        <br>
+        <textarea id="dataInput" placeholder="Paste your data here"></textarea>
+        <button onclick="parseAndDisplay()">Parse and Display</button>
+        <table id="dataTable" border="1"></table>
+        <button onclick="convertToSQL()">Convert to SQL</button>
+        <textarea id="sqlResult" rows="10" cols="50" readonly></textarea>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
